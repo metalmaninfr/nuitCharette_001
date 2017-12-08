@@ -1,3 +1,51 @@
 body {
 	background: black;
 }
+
+.container {
+	text-align: center;
+	color: green;
+}
+
+
+h1 {
+	margin-top: 5rem;
+	font-size: 10rem;
+}
+
+
+.gameStart{
+	text-align: left;
+	margin-top: 10rem;
+	margin-left: 50%;
+	transform: translateX(-50%)
+}
+
+.start, .letter{
+	font-size: 5rem;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.start::before {
+	content: '> ';
+	color: green;
+}
+
+.letter::before {
+	content: '> ';
+	color: green;
+}
+
+.explain {
+	margin-top: 10rem;
+}
+
+.explain-p {
+	font-size: 3rem;
+	color: #fff;
+}
+
+.copyright {
+	margin-top: 2rem;
+}
