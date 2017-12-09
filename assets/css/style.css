@@ -22,29 +22,38 @@ h1 {
 
 
 .gameStart{
+	position: relative;
 	text-align: left;
 	margin-top: 10rem;
 	/*background: red;*/
 }
 
-.start, .letter{
+
+.start, .letter, .git{
 	font-size: 2rem;
 	color: #fff;
 	text-transform: uppercase;
 }
 
+
 .start {
 	margin-bottom: 3rem;
 }
 
-.start::before {
-	content: '> ';
+.arrow {
+	position: absolute;
+	top: 0;
+	left: -50px;
+	font-size: 2rem;
 	color: #00FE00;
+	animation: blink 0.5s infinite alternate;
 }
 
-.letter::before {
-	content: '> ';
-	color: #00FE00;
+.level {
+	top: 80px;
+}
+.git {
+	display: none;
 }
 
 .explain {
@@ -60,3 +69,8 @@ h1 {
 .copyright {
 	margin-top: 2rem;
 }
+
+@keyframes blink {
+    from { opacity:1; }
+    to { opacity:0; }
+};

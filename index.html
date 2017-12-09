@@ -15,8 +15,9 @@
 		<h1>Shell Invaders</h1>
 
 		<div class="gameStart">
+			<span class="arrow">></span>
 			<p class="start">Start</p>
-			<p class="letter"> Letter Level</p>
+			<p class="letter">Letters Level</p>
 		</div>
 		<div class="explain">
 			<p class="explain-p">Pour Jouer, utiliser les touches <br> du clavier !</p>
@@ -32,6 +33,31 @@
 	</div>
 
 
-	<script type="text/javascript" src="./assets/js/main.js"></script>
+	<script type="text/javascript">
+			var arrow = document.querySelector('.arrow');
+			var letter = document.querySelector('.letter');
+
+			document.addEventListener('keyup', function(event){
+				if (event.keyCode === 38) {
+					arrow.classList.toggle('level');
+				}
+				else if (event.keyCode === 40) {
+					arrow.classList.toggle('level');
+				}
+				else if (event.keyCode === 13) {
+					console.log(arrow.classList.contains('level'))
+					if (arrow.classList.contains('level')) {
+						if (letter.innerHTML == 'Git Level') {
+							letter.innerHTML = 'Letters Level';
+						}
+						else {
+							letter.innerHTML = 'Git Level';
+						}
+					}
+				}
+				// 38 up , 40 down
+			});
+
+	</script>
 </body>
 </html>
